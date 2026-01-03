@@ -1,0 +1,14 @@
+:root {
+  --bg: #0b0b0b;
+  --brand: #f4b236; /* Markenorange */
+  --light: #f7f7f8; /* helles Grau */
+}
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+/* kleine Helfer */
+.header-blur {
+  background: rgba(0,0,0,.7);
+  backdrop-filter: blur(8px);
+}
