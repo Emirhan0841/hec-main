@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HEC Automatikgetriebe – Flyer A5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @page {
+        size: A5;
+        margin: 0;
+      }
+      @media print {
+        .noprint {
+          display: none !important;
+        }
+      }
+
+      :root {
+        --brand-orange: #f4b236;
+        --brand-dark: #111111;
+        --brand-light: #ffffff;
+        --ink: #0a0a0a;
+      }
+
+      .headline {
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.45);
+        letter-spacing: 0.02em;
+      }
+      .sheet {
+        width: 148mm;
+        height: 210mm;
+        margin: auto;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-neutral-900 flex items-center justify-center min-h-screen p-4"
+  >
+    <main class="sheet rounded-2xl shadow-2xl overflow-hidden">
+      <!-- Header -->
+      <section
+        class="bg-[var(--brand-dark)] h-[40%] relative flex flex-col justify-between px-8 py-6 text-white"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="assets/automatikgetriebe.png"
+            alt="HEC Logo"
+            class="h-10 w-auto"
+          />
+          <div class="text-sm tracking-widest uppercase text-white/80">
+            HECAUTOMATIKGETRIEBE
+          </div>
+        </div>
+
+        <div>
+          <h1
+            class="headline text-4xl sm:text-5xl font-extrabold leading-tight"
+          >
+            <span class="text-[var]">ERSTKLASSIGE HILFE</span> RUND UM IHR AUTO
+          </h1>
+          <p class="mt-1 text-white/90 text-sm sm:text-base">
+            Spezialist in Karlsruhe – Schnell. Fair. Zuverlässig.
+          </p>
+        </div>
+
+        <div class="flex gap-2 items-center text-xs uppercase tracking-wider">
+          <span
+            class="bg-[var(--brand-orange)] text-black font-semibold px-2 py-1 rounded"
+            >Autowerkstatt</span
+          >
+          <span class="text-white/80">— PRECISION IN MOTION</span>
+        </div>
+      </section>
+
+      <!-- Services Block -->
+      <section class="relative bg-white text-[var(--ink)]">
+        <div class="px-8 pt-8 pb-6">
+          <h2 class="text-center font-extrabold text-xl tracking-wider">
+            UNSERE SERVICES
+          </h2>
+          <p class="text-center text-xs mt-1 opacity-80">
+            Arbeitskosten – Material nach Bedarf zusätzlich
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            <!-- Service Card -->
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/oel.png"
+                  class="w-full h-full object-cover"
+                  alt="Ölwechsel"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Ölwechsel (Getriebe & Motor)</h3>
+                <p>Schonender Wechsel, Spülung auf Wunsch, Prüfprotokoll.</p>
+              </div>
+            </article>
+
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/servicewartung.png"
+                  class="w-full h-full object-cover"
+                  alt="Getriebe"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Automatikgetriebe-Service</h3>
+                <p>Diagnose, Dichtungen, Mechatronik, Adaptionsfahrt.</p>
+              </div>
+            </article>
+
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/bremsen.png"
+                  class="w-full h-full object-cover"
+                  alt="Bremsen"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Bremsen</h3>
+                <p>Scheiben/Beläge, Bremsflüssigkeit, Sicht-Check.</p>
+              </div>
+            </article>
+
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/klima.png"
+                  class="w-full h-full object-cover"
+                  alt="Achsvermessung"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Klimasercive</h3>
+                <p>
+                  Wartung & Befüllung inkl. Dichtigkeitsprüfung und
+                  Desinfektion.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/reifen.png"
+                  class="w-full h-full object-cover"
+                  alt="Diagnose"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Reifenwechsel</h3>
+                <p>
+                  Fachgerechter Wechsel inkl. Auswuchten und Prüfung auf
+                  Schäden.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="bg-[var(--brand-orange)] rounded-xl shadow p-3 flex gap-3 text-black"
+            >
+              <div class="w-20 h-16 overflow-hidden rounded-md">
+                <img
+                  src="assets/motor.png"
+                  class="w-full h-full object-cover"
+                  alt="Fahrwerk"
+                />
+              </div>
+              <div class="text-xs">
+                <h3 class="font-bold text-sm">Motorinstandsetzungen</h3>
+                <p>
+                  Diagnose & Reparatur: Undichtigkeiten, Sensoren,
+                  Zünd-/Einspritzung.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Kontakt -->
+      <section class="bg-[var(--brand-dark)] text-white relative">
+        <div
+          class="relative z-10 px-8 py-6 grid grid-cols-3 gap-3 items-center"
+        >
+          <div class="col-span-2">
+            <div class="text-sm font-semibold">Jetzt Termin sichern</div>
+            <div
+              class="text-2xl font-extrabold text-[var(--brand-orange)] leading-tight"
+            >
+              +49 173 4795051
+            </div>
+            <div class="text-xs opacity-90">
+              Fettweisstraße 2d, 76189 Karlsruhe
+            </div>
+            <div class="text-xs opacity-90">
+              info@hecautomatikgetriebe.com • hecautomatikgetriebe.com
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-2">
+            <img
+              src="assets/qr.png"
+              alt="QR zur Terminseite"
+              class="h-20 w-20 rounded bg-white p-1"
+            />
+            <div class="flex gap-2">
+              <img src="assets/phone.png" alt="Telefon" class="h-5" />
+              <img src="assets/whatsapp.png" alt="WhatsApp" class="h-5" />
+              <img src="assets/instagram.png" alt="Instagram" class="h-5" />
+            </div>
+          </div>
+        </div>
+        <div class="px-8 pb-4 -mt-2">
+          <div
+            class="h-[2px] w-full"
+            style="
+              background: linear-gradient(
+                90deg,
+                transparent,
+                var(--brand-orange),
+                transparent
+              );
+            "
+          ></div>
+          <p class="mt-2 text-[10px] text-white/70">
+            *Preise verstehen sich als Arbeitskosten. Material (Öl, Filter etc.)
+            nach Fahrzeug & Herstellerangaben zusätzlich.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="noprint fixed bottom-4 left-1/2 -translate-x-1/2 text-center text-white/80 text-xs"
+    >
+      <button
+        onclick="window.print()"
+        class="px-4 py-2 rounded bg-[var(--brand-orange)] text-black font-semibold shadow"
+      >
+        Drucken / Als PDF speichern
+      </button>
+    </div>
+  </body>
+</html>
