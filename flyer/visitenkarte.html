@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digitale Visitenkarte – HEC Automatikgetriebe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --brand-orange:#f4b236;
+      --brand-dark:#111111;
+      --brand-light:#ffffff;
+    }
+
+    /* eigenes Kartenformat */
+    .sheet{
+      width:85mm; height:55mm;
+      background:var(--brand-dark); color:#fff;
+      border-radius:12px;
+    }
+
+    /* Druckeinstellungen */
+    @page{ size:85mm 55mm; margin:0; }
+    *{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    @media print{
+      html,body{ width:85mm; height:55mm; margin:0; background:#fff; }
+      /* nur die Karte drucken */
+      body > *:not(.sheet){ display:none !important; }
+      .sheet{
+        position:fixed; inset:0; margin:auto;      /* zentrieren */
+        box-shadow:none !important; border-radius:0 !important;
+        overflow:hidden;                            /* kein Überlauf */
+        page-break-inside:avoid; page-break-before:avoid; page-break-after:avoid;
+      }
+    }
+
+    /* Bildschirm-Hintergrund */
+    body{ background:#27272a; }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+  <main class="sheet shadow-2xl flex flex-col justify-between p-4">
+    <!-- Logo + Name -->
+    <div class="flex items-center gap-3">
+      <img src="../public/assets/automatikgetriebe.png" alt="HEC Logo" class="h-10 w-auto"/>
+      <h1 class="text-lg font-bold tracking-wide">
+        <span class="text-[var(--brand-orange)]">HECAUTOMATIKGETRIEBE</span>
+      </h1>
+    </div>
+
+    <!-- Info -->
+    <div class="flex-1 flex flex-col justify-center text-sm">
+      <p class="font-semibold">Meisterbetrieb</p>
+      <p class="text-xs text-gray-300">Karlsruhe Rheinhafen</p>
+      <div class="h-[1px] w-2/3 bg-gray-500 my-2"></div>
+      <p class="font-bold">Inhaber Yavuz Cici</p>
+
+      <div class="flex items-center gap-2 mt-1">
+        <img src="../public/assets/telefon.png" alt="Telefon" class="h-4 w-4"/>
+        <span class="text-[var(--brand-orange)] font-semibold">0173 / 4795051</span>
+      </div>
+      <div class="flex items-center gap-2 mt-1">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        <span>info@hecautomatikgetriebe.com</span>
+      </div>
+      <div class="flex items-center gap-2 mt-1">
+        <img src="../public/assets/instagram.png" alt="Instagram" class="h-4 w-4"/>
+        <span>hec_automatikgetriebe</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bildschirm-Button (wird beim Drucken versteckt) -->
+  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 text-center text-white/80 text-xs">
+    <button onclick="window.print()" class="px-4 py-2 rounded bg-[var(--brand-orange)] text-black font-semibold shadow">
+      Drucken / Als PDF speichern
+    </button>
+    <p class="mt-2 opacity-70">Im Druckdialog: Ränder = <b>Keine</b>, Skalierung = <b>100 %</b>, <b>Hintergrundgrafiken</b> aktivieren.</p>
+  </div>
+</body>
+</html>

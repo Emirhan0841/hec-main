@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HEC Automatikgetriebe – Radlager-Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @page {
+        size: A5;
+        margin: 0;
+      }
+      @media print {
+        .noprint {
+          display: none !important;
+        }
+      }
+
+      :root {
+        --brand-orange: #e09b2f;
+        --brand-dark: #000000;
+        --brand-light: #ffffff;
+        --ink: #e6e6e6;
+      }
+
+      html,
+      body {
+        height: 100%;
+        background: #000;
+        -webkit-print-color-adjust: exact;
+        font-family: "Inter", "Roboto", system-ui, sans-serif;
+      }
+
+      .sheet {
+        width: 148mm;
+        height: 210mm;
+        margin: auto;
+        background: var(--brand-dark);
+        color: var(--ink);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .watermark {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 240mm;
+        opacity: 0.06;
+        filter: grayscale(100%) brightness(120%);
+        pointer-events: none;
+      }
+
+      .content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 28px 100px; /* mehr Platz unten für Footer */
+        box-sizing: border-box;
+      }
+
+      .avatar {
+        width: 110mm;
+        max-width: 80%;
+        aspect-ratio: 1/1;
+        border-radius: 9999px;
+        object-fit: cover;
+        border: 5px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        background: #111;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 12px;
+        align-items: end;
+        padding: 0 24px;
+        box-sizing: border-box;
+        color: rgba(230, 230, 230, 0.85);
+        font-size: 11px;
+      }
+
+      .footer .left {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .footer .tel {
+        color: var(--brand-orange);
+        font-weight: 800;
+        font-size: 18px;
+      }
+
+      .headline {
+        font-weight: 900;
+        color: var(--brand-orange);
+        letter-spacing: 0.02em;
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+
+      .desc {
+        font-size: 12px;
+        text-align: center;
+        color: rgba(230, 230, 230, 0.85);
+        max-width: 86%;
+      }
+
+      .sub {
+        font-size: 13px;
+        margin-top: 6px;
+        color: rgba(230, 230, 230, 0.9);
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 12px;
+        color: var(--ink);
+        text-align: center;
+      }
+
+      .legal {
+        font-size: 9.5px;
+        color: rgba(230, 230, 230, 0.55);
+        text-align: center;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <img
+        src="../public/assets/automatikgetriebe.png"
+        alt=""
+        class="watermark"
+      />
+
+      <div class="content">
+        <div style="text-align: center; margin-bottom: 8px">
+          <img
+            src="../public/assets/automatikgetriebe.png"
+            alt="HEC Logo"
+            style="height: 38px; margin: auto; opacity: 0.9"
+          />
+          <div
+            style="
+              font-size: 11px;
+              letter-spacing: 0.08em;
+              text-transform: uppercase;
+              color: rgba(230, 230, 230, 0.85);
+              margin-top: 2px;
+            "
+          >
+            HEC AUTOMATIKGETRIEBE
+          </div>
+        </div>
+
+        <div class="headline">RADLAGER-SERVICE</div>
+        <div class="sub">
+          Schnell. Fachgerecht. Transparent. – Arbeitslohn ab: <strong>60 €</strong>
+        </div>
+
+        <img
+          src="../public/assets/Radlager.png"
+          alt="Kupplung"
+          class="avatar"
+        />
+
+        <div class="title">
+          Radlager aus- und einpressen im ausgebauten Zustand.
+        </div>
+        <p class="desc">
+          Termin sichern und wieder sicher unterwegs sein: Wir prüfen das Lager,
+          pressen fachgerecht aus/ein und geben dir vorab ein transparentes
+          Angebot.
+        </p>
+        <p class="legal">
+          *Preis gilt für Arbeitszeit; Materialkosten abhängig vom
+          Fahrzeugmodell.
+        </p>
+      </div>
+
+      <footer class="footer">
+        <div class="left">
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.04em">
+            Termin per Anruf/WhatsApp
+          </div>
+          <div class="tel">+49 173 4795051</div>
+          <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em">
+            Sofort Termin anfragen
+          </div>
+        </div>
+        <div style="text-align: left">
+          Fettweisstra&szlig;e 2d<br />
+          76189 Karlsruhe
+        </div>
+        <div style="text-align: right">
+          info@hecautomatikgetriebe.com<br />
+          hecautomatikgetriebe.com
+        </div>
+      </footer>
+    </main>
+
+    <div
+      class="noprint fixed bottom-4 left-1/2 -translate-x-1/2 text-center text-white/80 text-xs"
+    >
+      <button
+        onclick="window.print()"
+        class="px-4 py-2 rounded bg-[var(--brand-orange)] text-black font-semibold shadow"
+      >
+        Drucken / Als PDF speichern
+      </button>
+    </div>
+  </body>
+</html>
