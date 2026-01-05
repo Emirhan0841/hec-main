@@ -1,0 +1,92 @@
+{
+  "segments": [
+    {
+      "id": "A",
+      "name": "Segment A - Wohngebiet",
+      "currentLoadKw": 420,
+      "expectedLoadKw": 520,
+      "weather": "mittel",
+      "incidentsLastYear": 2
+    },
+    {
+      "id": "B",
+      "name": "Segment B - Gewerbegebiet",
+      "currentLoadKw": 680,
+      "expectedLoadKw": 940,
+      "weather": "schlecht",
+      "incidentsLastYear": 5
+    },
+    {
+      "id": "C",
+      "name": "Segment C - Landwirtschaft",
+      "currentLoadKw": 210,
+      "expectedLoadKw": 240,
+      "weather": "gut",
+      "incidentsLastYear": 1
+    },
+    {
+      "id": "D",
+      "name": "Segment D - Kleines Industriegebiet",
+      "currentLoadKw": 760,
+      "expectedLoadKw": 980,
+      "weather": "mittel",
+      "incidentsLastYear": 3
+    }
+  ],
+  "riskResults": [
+    {
+      "id": 1,
+      "analysisType": "standard",
+      "timestamp": "2026-01-03T14:00:00Z",
+      "segments": [
+        { "segmentId": "A", "riskScore": 0.42, "overloadProbability": 0.21 },
+        { "segmentId": "B", "riskScore": 0.76, "overloadProbability": 0.48 },
+        { "segmentId": "C", "riskScore": 0.18, "overloadProbability": 0.08 },
+        { "segmentId": "D", "riskScore": 0.63, "overloadProbability": 0.37 }
+      ],
+      "topRiskSegment": "B",
+      "overallOverloadProbability": 0.41,
+      "recommendation": "Pruefe zusaetzliche Schaltmoeglichkeiten fuer Segment B und D."
+    },
+    {
+      "id": 2,
+      "analysisType": "extended",
+      "timestamp": "2026-01-03T15:00:00Z",
+      "segments": [
+        { "segmentId": "A", "riskScore": 0.51, "overloadProbability": 0.27 },
+        { "segmentId": "B", "riskScore": 0.88, "overloadProbability": 0.61 },
+        { "segmentId": "C", "riskScore": 0.22, "overloadProbability": 0.10 },
+        { "segmentId": "D", "riskScore": 0.71, "overloadProbability": 0.44 }
+      ],
+      "topRiskSegment": "B",
+      "overallOverloadProbability": 0.52,
+      "recommendation": "Sofortige Lastumverteilung fuer Segment B, Rueckfallebene aktivieren."
+    }
+  ],
+  "analysisRuns": [
+    {
+      "id": 101,
+      "requestedBy": "Netzplaner",
+      "analysisType": "standard",
+      "segments": ["A", "B", "C", "D"],
+      "status": "completed",
+      "resultId": 1
+    },
+    {
+      "id": 102,
+      "requestedBy": "Netzplaner",
+      "analysisType": "extended",
+      "segments": ["A", "B", "C", "D"],
+      "status": "completed",
+      "resultId": 2
+    },
+    {
+      "id": 103,
+      "requestedBy": "Netzplaner",
+      "analysisType": "extended",
+      "segments": ["B", "D"],
+      "status": "running",
+      "resultId": null
+    }
+  ]
+}

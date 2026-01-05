@@ -93,6 +93,21 @@ function initAll() {
   initCookieBanner();
 }
 
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("a[href]");
+  if (!link) return;
+  const href = link.getAttribute("href");
+  if (!href || !href.startsWith("/#")) return;
+
+  const hash = href.slice(1);
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  event.preventDefault();
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  history.pushState(null, "", href);
+});
+
 document.addEventListener("partials:loaded", initAll);
 
 if (document.readyState === "loading") {
