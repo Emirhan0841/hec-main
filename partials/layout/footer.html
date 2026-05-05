@@ -1,7 +1,10 @@
 <footer class="bg-[var(--light)] text-black border-t border-neutral-200">
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-2">
-      <img src="/public/assets/automatikgetriebe.png" data-root-src="/public/assets/automatikgetriebe.png" alt="HEC Logo" class="h-6 w-auto" />
+      <picture data-root-src="/public/assets/automatikgetriebe">
+        <source srcset="/public/assets/automatikgetriebe.webp" type="image/webp" data-root-srcset="/public/assets/automatikgetriebe.webp" />
+        <img src="/public/assets/automatikgetriebe.png" alt="HEC Logo" class="h-6 w-auto" />
+      </picture>
       <span class="font-semibold">HECAUTOMATIKGETRIEBE</span>
     </div>
 
@@ -17,10 +20,16 @@
 
     <div class="flex items-center gap-4">
       <a href="https://wa.me/491734795051" target="_blank" aria-label="WhatsApp">
-        <img src="/public/assets/whatsapp.png" data-root-src="/public/assets/whatsapp.png" alt="WhatsApp" class="h-6 w-6 hover:opacity-80 transition" />
+        <picture data-root-src="/public/assets/whatsapp">
+          <source srcset="/public/assets/whatsapp.webp" type="image/webp" data-root-srcset="/public/assets/whatsapp.webp" />
+          <img src="/public/assets/whatsapp.png" alt="WhatsApp" class="h-6 w-6 hover:opacity-80 transition" />
+        </picture>
       </a>
       <a href="https://www.instagram.com/hec_automatikgetriebe/#" target="_blank" aria-label="Instagram">
-        <img src="/public/assets/instagram.png" data-root-src="/public/assets/instagram.png" alt="Instagram" class="h-6 w-6 hover:opacity-80 transition" />
+        <picture data-root-src="/public/assets/instagram">
+          <source srcset="/public/assets/instagram.webp" type="image/webp" data-root-srcset="/public/assets/instagram.webp" />
+          <img src="/public/assets/instagram.png" alt="Instagram" class="h-6 w-6 hover:opacity-80 transition" />
+        </picture>
       </a>
     </div>
   </div>
@@ -28,7 +37,10 @@
   <!-- Floating Call (nur Handy) -->
   <a href="tel:+491734795051" class="fixed right-4 bottom-20 z-50 block md:hidden">
     <div class="bg-white rounded-full p-3 shadow-lg hover:scale-110 transition">
-      <img src="/public/assets/telefon.png" data-root-src="/public/assets/telefon.png" alt="Anrufen" class="w-10 h-10" />
+      <picture data-root-src="/public/assets/telefon">
+        <source srcset="/public/assets/telefon.webp" type="image/webp" data-root-srcset="/public/assets/telefon.webp" />
+        <img src="/public/assets/telefon.png" alt="Anrufen" class="w-10 h-10" />
+      </picture>
     </div>
   </a>
 </footer>

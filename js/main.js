@@ -84,6 +84,14 @@ function initRootLinks() {
       }
     }
   });
+
+  document.querySelectorAll("[data-root-srcset]").forEach((el) => {
+    const target = el.getAttribute("data-root-srcset");
+    if (target) {
+      const path = target.startsWith("/") ? `${baseRoot}${target.replace(/^\//, "")}` : `${prefix}${target}`;
+      el.setAttribute("srcset", path);
+    }
+  });
 }
 
 function initAll() {
